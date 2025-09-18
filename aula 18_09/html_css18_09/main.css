@@ -1,0 +1,40 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-row-start: 1;
+    grid-column: 1/10;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+li {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+#logo__image {
+    width: 110px;
+    height: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    margin-right: 24px;
+    font-family: "Kanit";
+    color:rgb(70, 70, 70);
+    font-weight: 300;
+    font-size: 24px;
+}
