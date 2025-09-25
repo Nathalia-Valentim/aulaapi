@@ -1,0 +1,89 @@
+/* Fundo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 380px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9); /* branco translúcido */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.logo-area img {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 0px;
+    margin-bottom: 24px;
+    color: #202020;
+}
+
+/* Inputs */
+.user {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    border-bottom: 2px solid #2575fc;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #6a11cb;
+}
+
+/* Link esqueci senha */
+.forgot {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.forgot a {
+    color: #2575fc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot a:hover {
+    color: #6a11cb;
+}
+
+/* Botão */
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: #2575fc;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #6a11cb;
+}
