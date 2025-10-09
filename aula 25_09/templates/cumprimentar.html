@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cumprimentar</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="template_style.css" type="text/css">
 
   <style>
     body {
@@ -115,14 +115,26 @@
   </nav>
 
   <div class="content">
+<!--
     {% if nome_usuario %}
-    <h1>Bem Vindo, {{ nome_usuario }}</h1>
+      <h1>Bem Vindo, {{ nome_usuario }}</h1>
     {% else %}
       <form action="cumprimentar" method="GET">
         <input type="text" name="nome">
         <input type="submit" name="Enviar">
       </form>
     {% endif %}
+-->
+
+    {% if nome_usuario %}
+      <h1>Bem Vindo, {{ nome_usuario }}</h1>
+    {% else %}
+      <form action="/cumprimentar" method="GET">
+        <input type="text" name="nome" placeholder="Seu nome">
+        <input type="submit" value="Enviar">
+      </form>
+    {% endif %}
+
   </div>
 </body>
 </html>

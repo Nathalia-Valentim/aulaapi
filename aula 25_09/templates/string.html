@@ -75,6 +75,17 @@
 
   <div class="content">
     <h1>Comprimento de uma string</h1>
+    
+    <form method="get" action="/string">
+      <label for="q">Digite uma string:</label>
+      <input type="text" name="q" id="q" required>
+      <button type="submit">Calcular</button>
+    </form>
+
+    {% if x is not none %}
+      <p>O comprimento da string é: {{ x }}</p>
+    {% endif %}
+
   </div>
 </body>
 </html>

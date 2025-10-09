@@ -1,5 +1,10 @@
-from flask import Flask, request, jsonify # type: ignore
+from flask import Flask, request, jsonify
+import os
 import mysql.connector
+from mysql.connector import Error
+from pymongo import MongoClient
+from bson.objectid import ObjectId
+
 
 app = Flask(__name__)
 
@@ -24,7 +29,7 @@ def info():
 # 3. Crie uma rota dinâmica /user/<username> que capture o nome do usuário e retorne um JSON de boas-vindas, como: {"message": "Olá, [username]!"}.
 @app.route("/user/<username>")
 def user(username):
-    return {"message":f"Ola, {username}!"}
+    return {"message":f"Olá, {username}!"}
 
 # 4. Crie uma rota /soma/<int:num1>/<int:num2> que receba dois números inteiros e retorne a soma deles em um JSON.
 @app.route("/soma/<int:num1>/<int:num2>")

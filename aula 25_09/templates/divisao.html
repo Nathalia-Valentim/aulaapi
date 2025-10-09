@@ -74,7 +74,27 @@
   </nav>
 
   <div class="content">
+    
     <h1>Divisão de dois números</h1>
+
+    <form method="get" action="/divisao">
+      <label for="a">Número A (dividendo):</label>
+      <input type="text" id="a" name="a" value="{{ a or '' }}" required>
+
+      <label for="b">Número B (divisor):</label>
+      <input type="text" id="b" name="b" value="{{ b or '' }}" required>
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    {% if resultado is not none %}
+      <p>Resultado: {{ resultado }}</p>
+    {% endif %}
+
+    {% if erro %}
+      <p style="color: red">{{ erro }}</p>
+    {% endif %}
+
   </div>
 </body>
 </html>
